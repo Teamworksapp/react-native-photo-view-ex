@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import androidx.annotation.Nonnull;
+import androidx.annotation.NonNull;
 
 /**
  * @author alwx (https://github.com/alwx)
@@ -25,16 +25,16 @@ public class PhotoViewPackage implements ReactPackage {
     }
 
     @Override
-    @Nonnull
-    public List<ViewManager> createViewManagers(@Nonnull ReactApplicationContext reactContext) {
+    @NonNull
+    public List<ViewManager> createViewManagers(@NonNull ReactApplicationContext reactContext) {
         List<ViewManager> viewManagers = new ArrayList<>();
         viewManagers.add(new PhotoViewManager(reactContext));
         return viewManagers;
     }
 
     @Override
-    @Nonnull
-    public List<NativeModule> createNativeModules(@Nonnull ReactApplicationContext reactContext) {
+    @NonNull
+    public List<NativeModule> createNativeModules(@NonNull ReactApplicationContext reactContext) {
         return Collections.emptyList();
     }
 }

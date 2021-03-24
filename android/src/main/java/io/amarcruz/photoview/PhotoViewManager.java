@@ -11,7 +11,7 @@ import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.annotations.ReactProp;
 
-import androidx.annotation.Nonnull;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import java.util.Map;
 
@@ -29,14 +29,14 @@ public class PhotoViewManager extends SimpleViewManager<PhotoView> {
     }
 
     @Override
-    @Nonnull
+    @NonNull
     public String getName() {
         return REACT_CLASS;
     }
 
     @Override
-    @Nonnull
-    protected PhotoView createViewInstance(@Nonnull ThemedReactContext reactContext) {
+    @NonNull
+    protected PhotoView createViewInstance(@NonNull ThemedReactContext reactContext) {
         return new PhotoView(reactContext);
     }
 
@@ -131,7 +131,7 @@ public class PhotoViewManager extends SimpleViewManager<PhotoView> {
     }
 
     @Override
-    protected void onAfterUpdateTransaction(@Nonnull PhotoView view) {
+    protected void onAfterUpdateTransaction(@NonNull PhotoView view) {
         super.onAfterUpdateTransaction(view);
         view.maybeUpdateView(Fresco.newDraweeControllerBuilder());
     }
